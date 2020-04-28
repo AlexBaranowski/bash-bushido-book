@@ -1,0 +1,5 @@
+output.pdf
+.*lock*
+tmp/*
+build*/
+*swp

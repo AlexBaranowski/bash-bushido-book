@@ -1,0 +1,36 @@
+---
+# Setup some things with Ansible.
+- name: Setup Bash Bushido Publising Environment
+     
+  hosts: localhost
+  become: True
+  tasks:
+    - name: get pandoc 2.5
+      get_url:
+        url: https://github.com/jgm/pandoc/releases/download/2.5/pandoc-2.5-linux.tar.gz
+        dest: /tmp/pandoc-25.tar.gz
+
+    - name: command to untar the pandoc
+      command: tar xvzf /tmp/pandoc-25.tar.gz --strip-components 1 -C /usr/local/ 
+
+    - name: make kindlegen-tmp-tmp
+      file:
+        state: directory
+        path: /tmp/kindlegen-tmp-tmp
+
+    - name: unarchive kindelgen
+      unarchive:
+        src: http://kindlegen.s3.amazonaws.com/kindlegen_linux_2.6_i386_v2_9.tar.gz
+        dest: /tmp/kindlegen-tmp-tmp
+        remote_src: True
+    
+    - name: copy kindlegen
+      copy:
+        src: /tmp/kindlegen-tmp-tmp/kindlegen
+        dest: /usr/bin/kindlegen
+        mode: 0755
+
+    - name: Remove kindelegen-tmp-tmp
+      file:
+        path: /tmp/kindlegen-tmp-tmp
+        state: absent
