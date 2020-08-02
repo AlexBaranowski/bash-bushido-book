@@ -153,7 +153,7 @@ The next example is `alt`+`q` that will be bound to the `uptime` command.
 As previously recognized, the bound command won't work with the direct output of the
 quoted mode (for example "^[q"). We have to make a little change to the quoted
 mode format or the output will not be understandable for readline library. 
-For example `atl`+`q` verbatim is `^[q` that was changed into readline-understandable `\eq`.
+For example `alt`+`q` verbatim is `^[q` that was changed into readline-understandable `\eq`.
 The following table shows the simple rules of conversion/translation from one
 notation to another.
 
@@ -235,7 +235,7 @@ encoded.
 
 ```
 [Alex@SpaceShip BashBushido]$ # ^[ - escape
-[Alex@SpaceShip BashBushido]$ # ^[q - atl+q
+[Alex@SpaceShip BashBushido]$ # ^[q - alt+q
 ```
 With the previous  `bind '"\eq":"uptime\n"'`, there is a possibility to invoke this
 binding with the following combination `esc` then `q`.  But there a is huge
