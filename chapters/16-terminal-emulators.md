@@ -70,7 +70,7 @@ cheat console.
 As it's easy to predict, the people that make free software ~~steal~~ adapt the
 idea of drop-down terminals and then perfect it. In Bash Bushido, we will
 discuss the two most popular dropdown terminals - Guake and Yakuake. Note that
-both have names that end with **ake** to honor the **Quake** game.
+both have names that end with **uake** to honor the **Quake** game.
 
 
 ## Guake - Gnome Drop Down Terminal
