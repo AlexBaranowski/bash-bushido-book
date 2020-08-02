@@ -98,7 +98,7 @@ Mnemonics:
 
 - `ctrl`+`x` then `ctrl` + `u`ndo.
 
-## Invoke your favourite $EDITOR.
+## Invoke your favourite $EDITOR
 
 Sometimes there is a need to type a longer script ad-hoc. It's more convenient to
 use the favourite text editor than to type the script line by line. For this use-case, there 

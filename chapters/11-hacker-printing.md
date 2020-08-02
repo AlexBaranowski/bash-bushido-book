@@ -1,4 +1,4 @@
-# Print to console like a hacker (or a script kiddie).
+# Print to console like a hacker (or a script kiddie)
 In this chapter, we will look into the way of printing the letters, symbols,
 even some kind of Linux memes. Please note that the knowledge from this chapter
 is not very helpful when it comes to being a SysAdmin or DevOps.

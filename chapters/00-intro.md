@@ -1,4 +1,4 @@
-# Bash Bushido - become the command line master.
+# Bash Bushido - Linux Tricks and Tips
 
 THIS BOOK MAY CONTAIN EXPLICIT LANGUAGE AND MEMES, READ AT YOUR OWN RISK !!!11
 
@@ -15,7 +15,7 @@ JetBrains, PyCharm is a registered trademark of JetBrains.
 EuroLinux is a registered trademark of EuroLinux.  
 All other product names mentioned herein are trademarks of their respective owners.  
 
-## About the Author.
+## About the Author
 I've written this book, so inserting "Abouth the Author" fell a little - well..
 
 I'm a Linux guy, Red Hat Engineer with a bachelor's degree in Computer Science
@@ -88,7 +88,7 @@ Bash Bushido is my first (self-published, but still) book. I want to dedicate
 it to someone who was always there for me – my Mom.
 
 
-## Our Bushido.
+## Our Bushido
 Well, I'm not a Japanese expert (watching ~~chinese~~ cartoons won't make you one :)), but according to one of the most trusted sources on Internet (Wikipedia)[yeah teachers, I wrote the book, and I am saying that Wikipedia might be a good source!], Bushido means _Way of the warrior_. In times of rockstar developers and ninja testers, being just a regular warrior might seem a little boring. But I see it quite differently - administration, automation, keeping infrastructure safe and up-to-date is hard work that requires a lot of talent. Sometimes little tweaks in Linux kernel options can save thousands of dollars, one wrong config that gives too broad access might make a company go bankrupt and put users/clients data at risk. In case of infrastructure, you need a warrior, someone who can spend countless hours debugging, testing, tweaking and automating. Lastly, Bash Bushido sounds excellent is meaningful and original.
 
 

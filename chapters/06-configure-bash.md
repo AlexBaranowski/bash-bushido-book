@@ -38,7 +38,7 @@ reliable than Google). The query that I used is "terminal true colour support".
 In the case that this little recommendation doesn't convince you, here is the link
 - https://gist.github.com/XVilka/8346728 .
 
-## Executing the chosen commands before the prompt.
+## Executing the chosen commands before the prompt
 Bash has a special variable `PROMPT_COMMAND`. According to the Bash
 documentation:
 
@@ -165,7 +165,7 @@ notation to another.
 *Exercise for reader* get `ESC` key in the quoted-insert mode.
 
 
-## Make our key bindings persistent.
+## Make our key bindings persistent
 
 One of the most important lessons that every
 SysAdmins/DevOps/ConfigManager(WhatEverNameTheyWantToCallThem) has to go
@@ -228,7 +228,7 @@ shells like `python`, `perl` or `psql`. That is the second reason why I highly
 recommend putting the bindings into the `.bashrc` file.
 
 
-## Meta == ESC a useless but interesting thing.
+## Meta == ESC a useless but interesting thing
 
 In the previous chapter, I challenged the reader to find how the `Escape` key is
 encoded.
@@ -244,7 +244,7 @@ the `^[` character only once. So, keeping the `Esc`+`q` pressed will write
 `uptime\n` once, then continue to put the `q` on your command line. While
 `alt`+`q` will repeatedly write `uptime\n` as long as the keys are pressed.
 
-## Change directory to the previous one.
+## Change directory to the previous one
 To change directory to the previous one just use `cd -`
 
 This trick works because Bash has the OLDPWD variable set by `cd`. How can we

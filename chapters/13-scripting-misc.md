@@ -5,7 +5,7 @@ whole book, and it contains a lot of small solutions and programs that any
 sysadmin/devops/production engineer can use.
 
 
-## Repeat until success.
+## Repeat until success
 
 Sometimes there is a need to repeat the command as long as there is no success.
 In most cases, three constructions are used.
@@ -58,7 +58,7 @@ In most cases, three constructions are used.
 In the third case, we use epoch time - a number of seconds since 00:00:00 UTC,
 Thursday, 1 January 1970. It's also called Unix Time.
 
-## Print lines based on the lines number.
+## Print lines based on the lines number
 
 `sed` is one of the mysterious, powerful tools from Unix that only guys with
 beards longer than their... FINGERS can understand. SED stands for Stream
@@ -118,7 +118,7 @@ prints data appended to the file.  The flag (switch/option) that enables it is
 type=USER_CMD msg=audit(1537357799.016:603): ...  
 ```
 
-## Substitute the string in a file.
+## Substitute the string in a file
 The most popular usage of sed is replacing (substituting) a string in a file. To
 demonstrate this capability, I used the following text:
 
@@ -155,7 +155,7 @@ seed is seed seed seed seed
 ```
 
 
-## Remove selected line/lines from a file.
+## Remove selected line/lines from a file
 Sed can also be used to remove the line/lines from the file. Imagine a test
 file named **remove.txt** that has the following content:
 
@@ -614,7 +614,7 @@ To only read the "warning" level messages the jq filter must be changed.
 
 
 
-### Shellcheck web version.
+### Shellcheck web version
 Shellcheck has a website that allows you to use it without installing -
 https://shellcheck.net . If you don't trust the author or his/her server,
 you can always spin your own similar website based on the official GitHub
@@ -708,7 +708,7 @@ find_files_to_check
 run_shellcheck
 ```
 
-## At execute command at a given time.
+## At execute command at a given time
 atd is daemon that helps schedule jobs for later execution. It stores jobs in
 /var/spool/at and executes them at a given time. Simple example:
 
@@ -748,7 +748,7 @@ More about at can be found in manuals:
 - `man 5 at.allow`
 
 
-## AWK print selected words.
+## AWK print selected words
 
 `awk` is another powerful tool from UNIX. It's a full programming language,
 excelling in string manipulation to the point that some people write whole reports
@@ -798,7 +798,7 @@ but inconvenient).
 ![AWK Meme\label{AWK MEME}](images/13-scripting/awk_still_useful.jpg)
 
 
-## AWK getting selected line range.
+## AWK getting selected line range
 AWK has a variable that keeps the current line number - `NR`. The example file
 contains the following lines:
 ```
@@ -815,7 +815,7 @@ to print lines from 2 to 3 you might use
 ```
 The version with strick inequalities (`'NR>1 && NR<4'`) will also work :).
 
-## Getting PID of the current Bash shell.
+## Getting PID of the current Bash shell
 
 PID is a process identifier - the unique number that process has in the
 operating system. But what is actually surprising is that not all IT people
@@ -1356,7 +1356,7 @@ should have a name that are alphanumerically sorted, for example, 001.png
 convert -delay 80 -loop 0 *.png my.gif
 ```
 
-## Merge multiple pdfs into one.
+## Merge multiple pdfs into one
 
 This one is inspired by my Mother, that seldom but regularly asks me about
 merging multiple pdfs into one. There are numerous online solutions, but the
@@ -1612,6 +1612,7 @@ $ sudo yum install -y mailx
 ```
 
 Sample mailing with subject "My Daemon Log" to "my.email@example.com":
+
 ```
 $ cat /var/log/my_deamon.log | mail -s "My Daemon Log." my.email@example.com
 ```
@@ -1676,7 +1677,7 @@ gnome-she 3658 Alex   35r   CHR    1,9      0t0 7190 /dev/urandom
 #(output truncated)
 ```
 
-To list files opened by selected PID - use '-p`. The example with current Bash
+To list files opened by selected PID - use `-p`. The example with current Bash
 PID:
 
 ```
@@ -1807,7 +1808,7 @@ thread of the processor, even if `yes > /dev/null` can take up to 100% of a sing
 core, it won't measure anything useful. 
 
 
-## Tee - split the output.
+## Tee - split the output
 In many cases, when you invoke the command, you want to get an output of the
 invoked command and put that into the log at the same time. In cases like
 these, `tee` command is the answer to your thoughts and prayers.

@@ -1,4 +1,4 @@
-# Let Keyboard Become Your Very Best Friend.
+# Let Keyboard Become Your Very Best Friend
 In countless texts, articles and how-tos we read about a better, faster, or
 shorter way to do something on the computer. The most prominent example is
 coping and pasting. Nearly all computer users know that `ctrl + c` and `ctrl +
@@ -17,7 +17,7 @@ Some readers might not know what touch typing is. Fortunately, there is an
 excellent definition of touch typing on Wikipedia. To sum it up - touch typing
 is the ability to use (type on) the keyboard without looking at it.
 
-### Reasons to learn touch typing.
+### Reasons to learn touch typing
 
 - Average typing speed is about 40 WPM (word per minute), people who type
   without looking at the keyboard can type twice as fast on average. Note that
@@ -32,7 +32,7 @@ is the ability to use (type on) the keyboard without looking at it.
   "extension" of my body. Writing programs is not easy, and it's easy to lose
   focus when you are "fighting" with the keyboard.
 
-### Reasons not to learn touch typing.
+### Reasons not to learn touch typing
 - When you are working for a corporation, where you have plenty of time and
   saying that work is done is more important than actually doing it, then touch
   typing might improve your work performance what is not preferred.
@@ -45,7 +45,7 @@ learn that in less than a month. OK, you've got me - I've never had
 a girlfriend, the distant friend of my friend (my friends also never had
 girlfriends) told that story to me.
 
-### Learn how to touch type in the Linux terminal.
+### Learn how to touch type in the Linux terminal
 This book is committed to the command line and terminal program/stuff. But it's
 only fair to say that there are great programs like "klavaro" or "ktouch", with
 their fancy GUIs and all necessary lessons, great statistics showing your

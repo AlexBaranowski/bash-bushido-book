@@ -76,7 +76,7 @@ I won't recommend using sshfs as an always mounted production network file
 system, but it's perfect for small changes, write/reads. The potential problem
 with SSHFS are I/O errors, but they should not corrupt the filesystem ;).
 
-### Allow others to use our sshfs (and other FUSE based) mount.
+### Allow others to use our sshfs (and other FUSE based) mount
 
 Sometimes, sharing FUSE based resources with other users can save us a lot of
 fuss. To do so, you have to edit `/etc/fuse.conf` (uncomment or add
@@ -198,7 +198,7 @@ TO_HOST=this.is.my.host.com
 ssh-keyscan with a tee in append (`-a`) mode runs.
 
 
-## Instant directory content sharing with Python.
+## Instant directory content sharing with Python
 
 Sometimes you have to share files with random people. One of the most
 straightforward solutions is to share the content of a directory on a web

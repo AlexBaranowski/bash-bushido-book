@@ -303,7 +303,7 @@ Mnemonics:
 - `ctlr` + `a`ctivate (extra options) then `ctrl` + `d`etach
 - screen -`r`eattach
 
-## Cool-retro-term.
+## Cool-retro-term
 
 There is a group of projects that I sometimes call "uncle projects" or "uncle
 software". I really like being an uncle, especially at familly gatherings, when

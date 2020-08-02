@@ -14,6 +14,7 @@ system. Then, together, we will dive a little deeper into aliases in Bash.
 
 The command that is responsible for alias management has quite a surprising
 name - `alias`. To print the currently used aliases use:
+
 ```
 Alex@Normandy$ alias
 alias back='popd'
@@ -26,7 +27,7 @@ empty `alias` and `alias -p`. The only difference that this option makes is
 when defining the new alias - it also prints all other aliases (with the new
 one ;)).
 
-To define a new alias, use `alias alias_name='command args'.
+To define a new alias, use `alias alias_name='command args'`.
 
 There are some aliases that I'm using in my very own environment.
 ```
@@ -126,7 +127,7 @@ this topic - https://dotfiles.github.io/ . It's excellent to start and find the
 most known configurations for many programs (like `emacs` or `vim`) or shells
 :).
 
-## Check what command is - type.
+## Check what command is - type
 To check what command really is you can use `type` shell builtin.
 Type for all possible returned values
 ```bash
@@ -165,7 +166,7 @@ function
 [Alex@SpaceShip ~]$
 ```
 
-## Check if the command is aliased.
+## Check if the command is aliased
 We have at least 5 way to do it, 4 of them are easy to script, the last one
 should be already known to an attentive reader.
 

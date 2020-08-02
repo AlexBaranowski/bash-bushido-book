@@ -1,4 +1,4 @@
-# Event designator, word designator, modifiers.
+# Event designator, word designator, modifiers
 This chapter is dedicated to some advanced Bash features. Because the presented material might be somehow overwhelming, the last subchapter contains the most frequent commands.
 
 ## What does `!` mean in Bash?
@@ -25,7 +25,7 @@ root:::
 ```
 As said before, this is the most popular event designator usage and one that you can find in nearly every Bash course.
 
-## Invoking a command by number in the history.
+## Invoking a command by number in the history
 Sometimes, it's easier to list a subset of commands than to search it
 interactively. Then you can leverage on event designator by invoking it with
 `![NUBMER]`. Look at the following example:
@@ -68,7 +68,7 @@ Earth
 Some of the readers might have already noticed that we can replace `!!` with
 `!-1`.
 
-## Invoking a command starting with a string.
+## Invoking a command starting with a string
 To invoke the last command that **starts** with a given string, use the event designator with a string so that the command looks like `!<string>`.
 Example below:
 ```
@@ -86,7 +86,7 @@ whoami
 Alex
 ```
 
-## Invoking a command containing the chosen string.
+## Invoking a command containing the chosen string
 `!?string?` substitutes the most recent command that **contains** a `string`. Note that which command is the most recent depends on your position in the history. As said before you can always get to the end of history with empty command line or with `ctrl` + `>`.
 
 The usage of `!string!?` is presented by the following example:
@@ -264,7 +264,7 @@ echo aaa bbb /a/b/c
 aaa bbb /a/b/c
 ```
   
-## Fast substitution in the previous command.
+## Fast substitution in the previous command
 When you make a typo or want to change an argument or any other string in the
 last invoked command, the following trick might be handy - `^old^new^` It
 replaces the `old` string with the `new`. You should also know that substitution by
@@ -304,7 +304,7 @@ ccc bbb ccc
 ```
 
 
-## histchars – let's control the history characters :).
+## histchars – let's control the history characters :)
 This trick is connected with both Bash history and word designator. There is a
 possibility to change the special characters of history by setting the
 `histchars` env variable. `histchars` is one of this special variable that
@@ -350,7 +350,7 @@ Fish is great
 bash: @: command not found...
 ```
 
-## Disable ! (event designator).
+## Disable ! (event designator)
 Imagine that you are writing a fantastic, maybe not as amazing as the one that
 you are reading, book about Bash. The first thing that you would show might
 be the famous `Hello, world!`.

@@ -38,7 +38,7 @@ There is a ton of commands there! Don't panic! Throughout this book, you will
 read about the most important ones.
 
 
-## Previous and next command. ↑ and ↓.
+## Previous and next command. ↑ and ↓
 The `ctrl` + `p` shortcut works like the arrow up (which asks Bash history about
 the previous command). The opposite is `ctrl` + `n` (which asks the bash for
 the next command in the history). With these two shortcuts, you don't have to
@@ -62,7 +62,7 @@ Mnemonics:
 - `ctrl` + `p`revious command
 - `ctrl` + `n`ext command
 
-## Character forward and backwards. → and ← arrows.
+## Character forward and backwards. → and ← arrows
 To move forward by one character, use `ctrl` + `f`, and to move the cursor 
 backward by one character, use `ctrl` + `b`. After remembering these and previous
 shortcuts, the arrows become obsolete :).
@@ -118,7 +118,7 @@ of the regular boring `enter` key. Both of those shortcuts are bound to the `acc
 accept-line can be found on "\C-j", "\C-m".
 ```
 
-## One word forward and backward.
+## One word forward and backward
 Up until this moment, you have learned a bunch of useful shortcuts, but each of them can be
 replaced with a single key-stroke. The really powerful shortcuts are those which are not
 represented by a single keyboard key - the first one that you will learn is
@@ -132,7 +132,7 @@ Mnemonics:
 - `alt` + `b`ackward
 
 
-## Remove from the cursor position to the end of the word.
+## Remove from the cursor position to the end of the word
 You might already notice that some shortcuts have a more **powerful** version
 when you hit `alt` key instead of `ctrl` key. `ctrl` + `d` removes one
 character when `alt` +`d` removes the whole word.

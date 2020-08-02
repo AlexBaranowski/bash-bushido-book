@@ -64,7 +64,7 @@ echo "NEW HISTORY"
 exit
 ```
 
-## Getting the 10 most popular commands.
+## Getting the 10 most popular commands
 To get the 10 most frequently used commands you can use the following
 one-liner.
 ```bash
@@ -164,7 +164,7 @@ separate sessions where you are using quite similar commands. The "collision"
 with commands from other terminals might be dreadful. Still, it's one of my
 favourite bash tricks.
 
-## History with date and time.
+## History with date and time
 
 Bash has another variable called `HISTTIMEFORMAT`. This variable is responsible
 for the format in which time that the command execution happened is saved/presented.
@@ -354,7 +354,7 @@ export HISTSIZE=2000
 export HISTFILESIZE=2000
 ```
 
-## Ignoring particular commands.
+## Ignoring particular commands
 
 Well, imagine that you go through the new code repository. After cloning it,
 you probably will read the README, go through the directories, list the files, go to
