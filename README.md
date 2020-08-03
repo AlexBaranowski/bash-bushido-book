@@ -18,3 +18,16 @@ Bash Bushido is a book dedicated to Linux/Unix/Windows Subsystem for Linux
 console. All of it is mixed with the author's specific sense of humour and a
 bunch of anecdotes. The primary audience of the book are SysAdmins/DevOps
 engineers.
+
+## Building and Requirements
+
+Building epub and mobi format requires:
+
+- `make`
+- `pandoc` 
+
+Building pdf requires
+
+- `convert` (imagemagic)
+- `chrome-driver`
+- `python 3`

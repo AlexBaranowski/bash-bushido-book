@@ -1,4 +1,4 @@
-# Bash Bushido - Linux Tricks and Tips
+# Bash Bushido - Linux Command Line Trick and Tips
 
 THIS BOOK MAY CONTAIN EXPLICIT LANGUAGE AND MEMES, READ AT YOUR OWN RISK !!!11
 
