@@ -51,7 +51,7 @@ give you a glimpse how to use it. To compile my version of the banner you can
 use following commands.
 
 ```
-git clone git@github.com:AlexBaranowski/Banner.git
+git clone https://github.com/AlexBaranowski/Banner.git
 cd Banner
 make
 sudo make install
@@ -358,11 +358,12 @@ Installation on EuroLinux (Enterprise Linux) 7:
 
 ```bash
 sudo yum install -y @development # We need gcc, git and make
-git clone git@github.com:bartobri/no-more-secrets.git 
+git clone https://github.com/bartobri/no-more-secrets.git
 cd no-more-secrets
 make all
 sudo make install
 ```
+
 Sample usage:
 
 ```
