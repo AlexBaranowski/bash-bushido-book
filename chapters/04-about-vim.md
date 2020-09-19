@@ -67,7 +67,7 @@ your time.
 
 To make vim your default editor, you can use the following code:
 
-```bash
+```
 [Alex@SpaceShip ~]$  { grep -q "EDITOR=vim" .bashrc &&  echo "EDITOR=vim is already set" ; } || echo "export EDITOR=vim" >> ~/.bashrc
 ```
 
@@ -96,7 +96,7 @@ it might be too long (it's easy to script though).
 Fortunately, there is also another vim specific solution that is way cooler!
 You can ask vim politely to edit a remote file.
 
-```bash
+```
 #vim PROTOCOL://USER@HOST//PATH
 vim scp://alex@jumphost:/etc/ssh/sshd_config
 ```

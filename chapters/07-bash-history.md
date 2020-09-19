@@ -16,7 +16,7 @@ Down the toilet (like most of my education) ^^. As said before, the Bash history
 file where each line represents one command. 
 
 Let's look at the following examples:
-```bash
+```
 Alex@Normandy$ echo "I love rock \
 > and roll"
 I love rock and roll
@@ -44,14 +44,14 @@ loops or long commands that are split with `\` into a single one.
 
 The file where history is/will be saved is defined by environment variable
 `HISTFILE`. `HISTFILE` has default value set to `~/.bash_history`
-```bash
+```
 [Alex@SpaceShip ~]$ echo $HISTFILE
 /home/Alex/.bash_history
 ```
 
 You can change the variable and save history to the new file. Look at the
 following listening.
-```bash
+```
 [Alex@SpaceShip ~]$ bash # Invoking the second bash
 [Alex@SpaceShip ~]$ export HISTFILE=~/REMOVE_ME_TEST
 [Alex@SpaceShip ~]$ echo "NEW HISTORY"
@@ -67,7 +67,7 @@ exit
 ## Getting the 10 most popular commands
 To get the 10 most frequently used commands you can use the following
 one-liner.
-```bash
+```
 history | awk '{print $2}' | sort | uniq -c | sed "s/^[ \t]*//" | sort -nr | head -10
 ```
 For example
@@ -116,7 +116,7 @@ subparagraphs). It's because out-of-box history is saved when you end the
 session.
 
 We can recover **freshly (not removed)** cleared history with `history -r`.
-```bash
+```
 [root@kojinew ~]# history
     1  cd /etc/pki/some_service/
     2  ls
@@ -171,7 +171,7 @@ for the format in which time that the command execution happened is saved/presen
 To start fun with the timed history, set it to something meaningful, then export
 it.
 
-```bash
+```
 export HISTTIMEFORMAT="%Y-%m-%d %T "
 ```
 Please note that there is a space after `%T`. Without it, the commands blend with

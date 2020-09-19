@@ -21,13 +21,14 @@ engineers.
 
 ## Building and Requirements
 
-Building epub and mobi format requires:
+Building epub and html formats requires:
 
 - `make`
 - `pandoc` 
 
-Building pdf requires
+Building PDF requires
 
-- `convert` (imagemagic)
 - `chrome-driver`
 - `python 3`
+
+I'm using the chrome printer scripts that I made - https://github.com/AlexBaranowski/chrome-print-page-python

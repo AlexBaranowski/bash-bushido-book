@@ -289,7 +289,7 @@ cumbersome. The only thing that I found unique in them is the ability to run on
 a server without X11 (or Wayland :)), and detach. To deatch your screen sesion
 use `ctrl` + `a` then `ctrl` + `d`.
 
-```bash
+```
 sudo yum install -y screen
 screen
 # Do you work - ex. setup IRC communicator
@@ -318,7 +318,7 @@ You can install the `cool-retro-term` from nux repos (https://li.nux.ro/). Or co
 it from the source. When compiling it from the source on an Enterprise Linux system,
 you should change qmltermwidget version. The following script worked for me:
 
-```bash
+```
 #!/bin/bash
 CRT_URL=https://github.com/Swordfish90/cool-retro-term/archive/1.0.1.tar.gz
 WIDGET_URL=https://github.com/Swordfish90/qmltermwidget/archive/v0.1.0.tar.gz

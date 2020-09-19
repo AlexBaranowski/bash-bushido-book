@@ -64,7 +64,7 @@ and ncurses-devel package.
 sudo yum install -y @development ncurses-devel
 ```
 After installation completes:
-```bash
+```
 wget https://ftp.gnu.org/gnu/gtypist/gtypist-2.9.5.tar.xz
 tar xvf gtypist-2.9.5.tar.xz
 cd gtypist-2.9.5/

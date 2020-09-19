@@ -25,7 +25,7 @@ are `python`, `perl` or `psql` - the PostgreSQL interactive terminal.
 
 To get the current Readline configuration, you can use bash built-in `bind`.
 
-```bash
+```
 [Alex@SpaceShip ~]$ bind -P 
 
 abort can be found on "\C-g", "\C-x\C-g", "\e\C-g".
@@ -44,7 +44,7 @@ the previous command). The opposite is `ctrl` + `n` (which asks the bash for
 the next command in the history). With these two shortcuts, you don't have to
 move your right hand to the arrow area to go through the Bash history.
 
-```bash
+```
 [Alex@SpaceShip ~]$ echo 1
 1
 [Alex@SpaceShip ~]$ echo 2
@@ -113,7 +113,7 @@ This one is quite useless because the `enter` key is exceptionally close to your
 little finger, but if you want, you can use `ctrl` + `j` or `ctrl` + `m` instead
 of the regular boring `enter` key. Both of those shortcuts are bound to the `accept-line` function.
 
-```bash
+```
 [Alex@SpaceShip ~]$ bind -P | grep 'C-m'
 accept-line can be found on "\C-j", "\C-m".
 ```

@@ -48,7 +48,7 @@ alias my_ip='curl -s ifconfig.co/json | python3 -m json.tool'
 The important and interesting alias is `alias sudo='sudo '`. To get why I'm
 aliasing sudo let's look at the following example.
 
-```bash
+```
 [Alex@SpaceShip BashBushido]$ alias ok='echo OK'
 [Alex@SpaceShip BashBushido]$ sudo ok
 sudo: ok: command not found
@@ -130,7 +130,7 @@ most known configurations for many programs (like `emacs` or `vim`) or shells
 ## Check what command is - type
 To check what command really is you can use `type` shell builtin.
 Type for all possible returned values
-```bash
+```
 [Alex@SpaceShip ~]$ type type
 type is a shell builtin
 [Alex@SpaceShip ~]$ type bash
@@ -151,7 +151,7 @@ bash: type: asdsadf: not found
 
 The most useful option of `type` is `-t` flag that prints only a single word.
 It's useful for scripting.
-```bash
+```
 [Alex@SpaceShip ~]$ type -t type
 builtin
 [Alex@SpaceShip ~]$ type -t bash
@@ -176,7 +176,7 @@ should be already known to an attentive reader.
 3. Use `BASH_ALIASES` variable
 4. Use `shell-expand-line`.
 
-```bash
+```
 [Alex@SpaceShip ~]$ alias
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -206,7 +206,7 @@ least two ways of doing that:
 2. use `\` before a command.
 
 Look at following listening:
-```bash
+```
 [Alex@SpaceShip eurolinux7]$ ls
 Dockerfile
 [Alex@SpaceShip eurolinux7]$ alias ls='echo Hit Me with Your Best Shot'

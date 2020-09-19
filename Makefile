@@ -1,3 +1,4 @@
+SHELL := /bin/bash
 BUILD = build
 MAKEFILE = Makefile
 OUTPUT_FILENAME = book
@@ -46,4 +47,8 @@ $(BUILD)/html/$(OUTPUT_FILENAME).html: $(MAKEFILE) $(METADATA) $(CHAPTERS) $(CSS
 	pandoc $(ARGS) --standalone --to=html5 -o $@ $(CHAPTERS)
 	cp -R $(IMAGES_FOLDER)/ $(BUILD)/html/$(IMAGES_FOLDER)/
 	cp $(CSS_FILE) $(BUILD)/html/$(CSS_FILE)
+
+$(BUILD)/pdf/$(OUTPUT_FILENAME).pdf: $(MAKEFILE) $(METADATA) $(CHAPTERS) $(CSS_FILE) $(IMAGES)
+	./make_pdfs	
+
 

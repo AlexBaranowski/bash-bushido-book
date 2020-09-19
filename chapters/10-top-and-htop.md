@@ -44,7 +44,7 @@ any extra steps to install.
 To invoke the `top` just type its name, additional arguments are not required.
 
 
-```bash
+```
 top
 ```
 
@@ -184,7 +184,7 @@ By default, there are the following columns (fields) in the task area:
 ## Customizing the TOP
 Before making the customization, I strongly recommend making the top symlink
 and then invoking `top` by it.
-```bash
+```
 $ sudo ln -s /usr/bin/top /usr/bin/my_top
 $ my_top
 ```

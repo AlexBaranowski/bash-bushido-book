@@ -48,7 +48,7 @@ If set, the value is executed as a command before issuing each primary prompt
 
 
 Example:
-```bash
+```
 [Alex@SpaceShip ~]$ export PROMPT_COMMAND='date +%F-%T |tr -d "\n"'
 2018-08-20-22:58:22[Alex@SpaceShip ~]$ # Enter
 2018-08-20-22:58:23[Alex@SpaceShip ~]$ # Enter 
@@ -77,7 +77,7 @@ the worst case scenario, you have to wait 5 seconds for your prompt :). Another
 thing worth pointing out is that this command works with both Python 2 and 3.
 
 Now you can add it to /etc/.bashrc.
-```bash
+```
 echo "export PROMPT_COMMAND='python -c \"import random; import time; time.sleep(random.random()*5)\"'" | sudo tee -a /etc/bashrc
 ```
 Note that, as according to the documentation  PROMPT_COMMAND is invoked only for
@@ -104,7 +104,7 @@ but what about special keys? For example the `F9` key is encoded as `^[[20~`. Ho
 do I know that? I used the following combination: `ctrl-v`, then `F9`.  To get
 information about what function is bound to `ctrl` + `v`, invoke:
 
-```bash
+```
 [Alex@SpaceShip ~]$ bind -P | grep '\C-v'
 display-shell-version can be found on "\C-x\C-v".
 quoted-insert can be found on "\C-q", "\C-v", "\e[2~".
@@ -117,7 +117,7 @@ verbatim (key code).
 
 After this short off topic, you can make your own shortcut.In the following
 example, we bind the `F9` key with the `date` command.
-```bash
+```
 [Alex@SpaceShip BashBushido]$ # ^[[20~ - F9 found in quoted mode
 [Alex@SpaceShip BashBushido]$ bind '"\e[20~":"date\n"'
 [Alex@SpaceShip BashBushido]$ date # F9
@@ -328,7 +328,7 @@ pushd with popd.
 To do so, I added the following to my .bashrc. I would like to note that this
 solution is loosely based on "Jonathan M Davis" Unix and Linux Stack Exchange
 https://unix.stackexchange.com/a/4291/183070
-```bash
+```
 alias cd='pushd'
 alias back='popd'
 popd()
@@ -395,7 +395,7 @@ invokes `cd` that changes our location to it.
 
 To get what I'm talking about look at the following example:
 
-```bash
+```
 [Alex@Normandy: BashBushido]$ shopt -s autocd
 [Alex@Normandy: BashBushido]$ /home
 cd /home
