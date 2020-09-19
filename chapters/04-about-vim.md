@@ -22,7 +22,7 @@ As a self-proclaimed `vim` lover, I recommend staying with the `emacs` shortcuts
 
 ![Even prequels are better than the new films. \label{Even prequels are better than new the films.}](images/04-about-vim/treason.jpg)
 
-## Best 30 minute investment - vimtutor.
+## Best 30 minute investment - vimtutor
 Well, there are three types of people in the Linux world. The first group are
 those old enough to use a pretty good operating system that includes: mailer,
 news reader, web browser, directory editor, CVS interface and a finally text
@@ -67,11 +67,11 @@ your time.
 
 To make vim your default editor, you can use the following code:
 
-```bash
+```
 [Alex@SpaceShip ~]$  { grep -q "EDITOR=vim" .bashrc &&  echo "EDITOR=vim is already set" ; } || echo "export EDITOR=vim" >> ~/.bashrc
 ```
 
-## I don't need vim - I have my powerful IDE.
+## I don't need vim - I have my powerful IDE
 
 Well, it's true - vim is small, even with the best plugins, most popular IDEs will
 probably in many aspects surpass it. However, as said before, nearly all IDEs have
@@ -79,7 +79,7 @@ the vim plugin. With this approach, you can get the best of two worlds. A lot of
 "serious" development is done with JetBrains IDE's. Fortunately, the IdeaVim
 plugin supports all of the most popular operations.
 
-## Edit file over ssh, HTTP, FTP and more with Vim.
+## Edit file over ssh, HTTP, FTP and more with Vim
 
 As console warriors, sometimes we must edit remote files. We usually log into a
 machine and then open our editor of choice. The second option is to copy the file,
@@ -96,7 +96,7 @@ it might be too long (it's easy to script though).
 Fortunately, there is also another vim specific solution that is way cooler!
 You can ask vim politely to edit a remote file.
 
-```bash
+```
 #vim PROTOCOL://USER@HOST//PATH
 vim scp://alex@jumphost:/etc/ssh/sshd_config
 ```

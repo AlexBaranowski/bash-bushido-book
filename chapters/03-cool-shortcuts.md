@@ -98,7 +98,7 @@ Mnemonics:
 
 - `ctrl`+`x` then `ctrl` + `u`ndo.
 
-## Invoke your favourite $EDITOR.
+## Invoke your favourite $EDITOR
 
 Sometimes there is a need to type a longer script ad-hoc. It's more convenient to
 use the favourite text editor than to type the script line by line. For this use-case, there 
@@ -137,18 +137,18 @@ this one. You can find them with `bind -P | grep expand`.
 
 Examples:
 
-```bash
+```
 [Alex@SpaceShip BashBushido]$ mkdir {1,2,3}{a,b,c}
 [Alex@SpaceShip BashBushido]$ echo $(ls -d 1*) # # `ctrl`+`alt`+`e`
 # Changes into
 [Alex@SpaceShip BashBushido]$ echo 1a 1b 1c
 ```
-```bash
+```
 [Alex@SpaceShip BashBushido]$ grep # `ctrl`+`alt`+`e`
 # Changes into 
 [Alex@SpaceShip BashBushido]$ grep --color=auto
 ```
-```bash
+```
 [Alex@SpaceShip BashBushido]$ history | head -3
     1  vim ~/.bashrc 
     2  vim ~/.bashrc 
@@ -166,7 +166,7 @@ definition - globs are patterns that specify the pathname. I highly recommend
 reading the `glob(7)` manual page. The key biding for `glob-expansion` is 
 `ctrl` + `x` then `*`. To understand globs let's look at the following example.
 
-```bash
+```
 # This shell expansion makes directory a/a a/b and a/c
 [Alex@SpaceShip ~]$ mkdir -p a/{a,b,c}/ 
 # This shell expansion makes three empty files with song.mp3 name
@@ -177,7 +177,7 @@ reading the `glob(7)` manual page. The key biding for `glob-expansion` is
 ```
 
 Another example:
-```bash
+```
 Alex@Normandy:~/$ ls -1 /etc/[d]*
 # After hitting glob-expand-word.
 Alex@Normandy:~/$ ll -d /etc/dbus-1 /etc/dconf /etc/default #... output truncated

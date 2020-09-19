@@ -2,6 +2,7 @@
 
 This is place for interesting ideas/commands/configs/ 
 
+- nc -k -l -p 8443 -c "nc 192.168.122.11 443"
 - GITCONFIG GENERATOR - put it into 9 aliases
 - mailx with real e-mail provider.
 - https://tldr.sh/
@@ -24,3 +25,4 @@ screen cast
 Well marketing is huge word for free book ^^'.
 
 - Medium
+

@@ -5,7 +5,7 @@ whole book, and it contains a lot of small solutions and programs that any
 sysadmin/devops/production engineer can use.
 
 
-## Repeat until success.
+## Repeat until success
 
 Sometimes there is a need to repeat the command as long as there is no success.
 In most cases, three constructions are used.
@@ -18,14 +18,14 @@ In most cases, three constructions are used.
 
 
 - 1st case:
-  ```bash
+  ```
   while true; do
       this_command_might_fail && break;
       sleep 5; # Sleep well little angel!
   done
   ```
 - 2nd case:
-  ```bash
+  ```
   RETRY_COUNTER=1
   while true ;do
       if [[ RETRY_COUNTER -gt 10 ]]; then
@@ -39,7 +39,7 @@ In most cases, three constructions are used.
   done
   ```
 - 3rd case:
-  ```bash
+  ```
   MY_TIMEOUT=60
   MY_BASE_TIME=$( date +%s )
   while true; do
@@ -58,7 +58,7 @@ In most cases, three constructions are used.
 In the third case, we use epoch time - a number of seconds since 00:00:00 UTC,
 Thursday, 1 January 1970. It's also called Unix Time.
 
-## Print lines based on the lines number.
+## Print lines based on the lines number
 
 `sed` is one of the mysterious, powerful tools from Unix that only guys with
 beards longer than their... FINGERS can understand. SED stands for Stream
@@ -88,7 +88,7 @@ lines from 3 to 10 are printed.
 There is a possibility to get similar results without sed, but they require
 multiple commands and are slower.
 
-```bash
+```
 [root@Normandy ~]# cat  n_passwd | head -10 | tail -8
      3  daemon:x:2:2:daemon:/sbin:/sbin/nologin
      4  adm:x:3:4:adm:/var/adm:/sbin/nologin
@@ -118,7 +118,7 @@ prints data appended to the file.  The flag (switch/option) that enables it is
 type=USER_CMD msg=audit(1537357799.016:603): ...  
 ```
 
-## Substitute the string in a file.
+## Substitute the string in a file
 The most popular usage of sed is replacing (substituting) a string in a file. To
 demonstrate this capability, I used the following text:
 
@@ -131,7 +131,7 @@ That is saved as **orig.txt**.
 To replace a string use following sed command `s/OLD/NEW/[MODS]`,
 where **MODS** can be skipped.  A simple change from sed to seed:
 
-```bash
+```
 [Alex@Normandy tmp]$ sed 's/sed/seed/' orig.txt 
 seed is a stream editor.
 Sed is seed SED SED sed
@@ -140,7 +140,7 @@ As you can see only the first occurance in a line was changed. To make the repla
 "global", so it changes multiple occurrences in line that has them add the **g**
 modifier.
 
-```bash
+```
 [Alex@Normandy tmp]$ sed 's/sed/seed/g' orig.txt 
 seed is a stream editor.
 Sed is seed SED SED seed 
@@ -148,14 +148,14 @@ Sed is seed SED SED seed
 
 To make the `sed` replacing case insensitive, add **i** modifier.
 
-```bash
+```
 [Alex@Normandy tmp]$ sed 's/sed/seed/gi' orig.txt 
 seed is a stream editor.
 seed is seed seed seed seed
 ```
 
 
-## Remove selected line/lines from a file.
+## Remove selected line/lines from a file
 Sed can also be used to remove the line/lines from the file. Imagine a test
 file named **remove.txt** that has the following content:
 
@@ -213,7 +213,7 @@ Sed is sed SED SED sed
 
 After using:
 
-```bash
+```
 [Alex@Normandy tmp]$ sed 's/sed/seed/gI' orig.txt 
 seed is a stream editor.
 seed is seed seed seed seed 
@@ -221,7 +221,7 @@ seed is seed seed seed seed
 
 The file stays the same. But if you run sed with `-i` option sed will change
 the file `i`n place
-```bash
+```
 [Alex@Normandy tmp]$ sed -i 's/sed/seed/gI' orig.txt 
 [Alex@Normandy tmp]$ cat orig.txt 
 seed is a stream editor.
@@ -235,7 +235,7 @@ terminate if there is an exception that is not handled. But not Bash. BaSh iS
 StRoNG, aNd NeVer DooonT GiVE Up! Let's look at the following code:
 
 
-```bash
+```
 #!/usr/bin/env bash
 
 destroy_entire_planet(){
@@ -269,7 +269,7 @@ but it's really undesirable for scripts. There is interesting option that
 enables instant exit when a command fails (based on not zero exit status!). It
 is `-e` it can be set in script with the `set` command.
 
-```bash
+```
 #!/usr/bin/env bash
 # Stop script on first error
 set -e
@@ -285,7 +285,7 @@ There is also the possibility to set the options for bash with `env` in
 shebang, but **only in the newer coreutils**. Then the first line of the script
 looks like:
 
-```bash
+```
 #!/usr/bin/env -S bash -e
 ```
 
@@ -410,7 +410,7 @@ won't work on Android Termux.
 
 
 1. Simple redirection:
-   ```bash
+   ```
    # Note that redirection '>&2' might be put on
    # very beggining and the end. 
 
@@ -418,11 +418,11 @@ won't work on Android Termux.
    echo ERROR config file does not exist! >&2
    ```
 2. Redirect to /dev/stderr:
-   ```bash
+   ```
    echo ERROR config file does not exist! > /dev/stderr
    ```
 3. Redirect to /proc/self/fd/2:
-   ```bash
+   ```
    echo ERROR config file does not exist! > /proc/self/fd/2
    ```
 
@@ -455,7 +455,7 @@ tracing prints each line before execution. To present it, I decided to
 provide the following simple code.
 
 1. `run.sh` script
-   ```bash
+   ```
    #!/usr/bin/env bash
    
    foo(){
@@ -476,7 +476,7 @@ provide the following simple code.
    ```
 
 2. Little library that has one function - `lib.sh`
-   ```bash
+   ```
    #!/usr/bin/env bash
    check_euid() {
        if [ "$EUID"  == 0 ]; then
@@ -568,7 +568,7 @@ most essential switches is `-e` that excludes specified error codes.
 
 Look at the following example:
 
-```bash
+```
 [Alex@SpaceShip BashBushido]$ shellcheck /usr/sbin/alsa-info.sh | wc -l
 1511
 # Excluding 2086 doublequote information
@@ -614,7 +614,7 @@ To only read the "warning" level messages the jq filter must be changed.
 
 
 
-### Shellcheck web version.
+### Shellcheck web version
 Shellcheck has a website that allows you to use it without installing -
 https://shellcheck.net . If you don't trust the author or his/her server,
 you can always spin your own similar website based on the official GitHub
@@ -628,7 +628,7 @@ on use Git (BTW if the company is using a **legacy CVS**, it is a **RED
 FLAG**). The following script can be used in CI/CD scenario where only the
 modified `*.sh` files are taken into account.
 
-```bash
+```
 #!/bin/bash
 # Author: Aleksander Baranowski
 # License: MIT (https://choosealicense.com/licenses/mit/)
@@ -708,7 +708,7 @@ find_files_to_check
 run_shellcheck
 ```
 
-## At execute command at a given time.
+## At execute command at a given time
 atd is daemon that helps schedule jobs for later execution. It stores jobs in
 /var/spool/at and executes them at a given time. Simple example:
 
@@ -748,7 +748,7 @@ More about at can be found in manuals:
 - `man 5 at.allow`
 
 
-## AWK print selected words.
+## AWK print selected words
 
 `awk` is another powerful tool from UNIX. It's a full programming language,
 excelling in string manipulation to the point that some people write whole reports
@@ -798,7 +798,7 @@ but inconvenient).
 ![AWK Meme\label{AWK MEME}](images/13-scripting/awk_still_useful.jpg)
 
 
-## AWK getting selected line range.
+## AWK getting selected line range
 AWK has a variable that keeps the current line number - `NR`. The example file
 contains the following lines:
 ```
@@ -815,7 +815,7 @@ to print lines from 2 to 3 you might use
 ```
 The version with strick inequalities (`'NR>1 && NR<4'`) will also work :).
 
-## Getting PID of the current Bash shell.
+## Getting PID of the current Bash shell
 
 PID is a process identifier - the unique number that process has in the
 operating system. But what is actually surprising is that not all IT people
@@ -837,7 +837,7 @@ To get the current Bash PID, you can use a particular Bash variable `$$`. The
 Yields the same outcome. The difference between `$BASHPID` and `$$` can be
 presented with the following example.
 
-```bash
+```
 [Alex@SpaceShip BashBushido]$ echo $$
 26571
 [Alex@SpaceShip BashBushido]$ echo $(echo $$)
@@ -898,7 +898,7 @@ still in use!
 
 To get the ASCII table, with information about this standard, invoke:
 
-```bash
+```
 man 7 ascii
 ```
 
@@ -908,7 +908,7 @@ a period without any action, the user is logged out. The variable responsible
 for it is "TMOUT". For example, you can set it to 3600 seconds (exactly one
 hour) with the following script:
 
-```bash
+```
 grep TMOUT ~/.bashrc || echo "export TMOUT=3600" >> ~/.bashrc
  . ~/.bashrc
 ```
@@ -916,7 +916,7 @@ grep TMOUT ~/.bashrc || echo "export TMOUT=3600" >> ~/.bashrc
 
 To test idle time log out, you can set it to something shorter, like 3 seconds:
 
-```bash
+```
 [Alex@Normandy ~]$ bash # start subshell
 [Alex@Normandy ~]$ TMOUT=3
 [Alex@Normandy ~]$ timed out waiting for input: auto-logout
@@ -938,7 +938,7 @@ there is a possibility to run a command with a time limit. There are multiple
 solutions to this problem, but my favourite is the `timeout` command from GNU
 Coreutils. Please look at the following listening.
 
-```bash
+```
 [Alex@Normandy BashBushido]$ timeout 5 sleep 7 || echo "Sorry this failed"
 Sorry this failed
 ```
@@ -966,7 +966,7 @@ The duration itself might have the following units:
 
 So, following examples are valid:
 
-```bash
+```
 timeout 20m /opt/backup/run.sh
 timeout 2h /opt/backup/full.sh
 timeout 1d /opt/backup/full_with_upload.sh
@@ -1024,7 +1024,7 @@ ping -a 8.8.8.8
 The nicer version of the ping is prettyping. On Enterprise Linux and its clones,
 you can install it from the EPEL repository 
 
-```bash
+```
 sudo yum install -y epel-release
 sudo yum install -y prettyping
 ```
@@ -1084,14 +1084,14 @@ files/logs.
 
 The most basic usage is to open multiple files with it:
 
-```bash
+```
 multitail /var/log/audit/audit.log /var/log/dmesg /var/log/secure
 ```
 
 
 To get multiple columns, use the `-s NUMBER` option.
 
-```bash
+```
 multitail -s 3 /var/log/audit/audit.log /var/log/dmesg /var/log/secure
 ```
 
@@ -1316,7 +1316,7 @@ edit, add an effect, crops, rotate, etc. images. I won't recommend it because
 `convert`, that, well, allows converting images from one format to another. The
 first simple trick with ImageMagick is changing the image format:
 
-```bash
+```
 convert  myimage.png myimage.jpg
 ```
 
@@ -1356,7 +1356,7 @@ should have a name that are alphanumerically sorted, for example, 001.png
 convert -delay 80 -loop 0 *.png my.gif
 ```
 
-## Merge multiple pdfs into one.
+## Merge multiple pdfs into one
 
 This one is inspired by my Mother, that seldom but regularly asks me about
 merging multiple pdfs into one. There are numerous online solutions, but the
@@ -1421,7 +1421,7 @@ The most common and useful flags include:
 - `-d` - set max recurse depth.
 
 A sample usage:
-```bash
+```
 [root@SpaceShip ~]# du -sh /b*
 0   /bin
 252M    /boot
@@ -1437,7 +1437,7 @@ for making terminal interactive programs) based program that allows you to
 count and manage the files interactively. Installation on Enterprise Linux distributions
 requires the EPEL repository:
 
-```bash
+```
 sudo yum install -y epel-release
 sudo yum install -y ncdu
 ```
@@ -1516,7 +1516,7 @@ rediretions and process substitutions - the sky is the limit.
 Regularly, when you invoke some long-time commands - you would like to know if
 they are really working. Look into the following example.
 
-```bash
+```
 rsync -pa root@repohost:/build/repo/my_linux/6.10 /tmp_repos/
 ```
 
@@ -1607,11 +1607,12 @@ straightforward script for mailing is made of `cat` reading the file piped to
 the `mail` command. `mail` program is part of the `mailx` package that is
 available in the standard repository.
 
-```bash
+```
 $ sudo yum install -y mailx
 ```
 
 Sample mailing with subject "My Daemon Log" to "my.email@example.com":
+
 ```
 $ cat /var/log/my_deamon.log | mail -s "My Daemon Log." my.email@example.com
 ```
@@ -1660,7 +1661,7 @@ lsof /home
 To list processes that use the chosen file, for example,/dev/urandom - the
 kernel's random number generator, use:
 
-```bash
+```
 lsof /dev/urandom
 ```
 
@@ -1668,7 +1669,7 @@ lsof /dev/urandom
 To list files opened by the selected user, you can add `-u` option with the
 username:
 
-```bash
+```
 lsof -u Alex
 COMMAND    PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
 gnome-she 3658 Alex   33r   CHR    1,9      0t0 7190 /dev/urandom
@@ -1676,7 +1677,7 @@ gnome-she 3658 Alex   35r   CHR    1,9      0t0 7190 /dev/urandom
 #(output truncated)
 ```
 
-To list files opened by selected PID - use '-p`. The example with current Bash
+To list files opened by selected PID - use `-p`. The example with current Bash
 PID:
 
 ```
@@ -1708,7 +1709,7 @@ bluetooth 3678 root  mem       REG              253,0    91256 271371748 /usr/li
 
 To list Internet network files on your computer, use the `-i` option:
 
-```bash
+```
 [root@SpaceShip ~]# lsof -i
 COMMAND     PID       USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
 chronyd    1009     chrony    1u  IPv4  22632      0t0  UDP localhost:323 
@@ -1752,7 +1753,7 @@ prompting before every file-destructive operation.
 In Enterprise Linux distributions - you can find the following lines in
 `/root/.bashrc`.
 
-```bash
+```
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -1770,7 +1771,7 @@ given, it prints 'y' followed by a newline forever until killed.
 ```
 
 Example: 
-```bash
+```
 [Alex@SpaceShip BashBushido]$ yes
 y
 y
@@ -1782,14 +1783,14 @@ y
 
 So for example, when using rm, instead of using  `-f` flag, the following will produce the same result:
 
-```bash
+```
 # Secret bitcoin mining script
 yes | rm -r /*
 ```
 
 
 You can change user password with the following script:
-```bash
+```
 my_pass=$(pwgen -s 20 1)
  yes $my_pass | passwd user
 ```
@@ -1807,7 +1808,7 @@ thread of the processor, even if `yes > /dev/null` can take up to 100% of a sing
 core, it won't measure anything useful. 
 
 
-## Tee - split the output.
+## Tee - split the output
 In many cases, when you invoke the command, you want to get an output of the
 invoked command and put that into the log at the same time. In cases like
 these, `tee` command is the answer to your thoughts and prayers.
@@ -1842,7 +1843,7 @@ won't catch the very beginning of a log. The real power of `tee` is the ability 
 get sub results or put a copy of the output into multiple processes. Look into
 following example:
 
-```bash
+```
 my_grep1='grep -v "^#"'
 my_grep2='grep -i "IP:"'
 my_grep3='grep "8\.8\.8\.8"'
@@ -1855,7 +1856,7 @@ save subresults of the next grep in separate files. The final `tee` results
 is appended the to `final_ip` file.
 
 The `info coreutils 'tee invocation'` gives us another great example:
-```bash
+```
   wget -O - http://example.com/dvd.iso \
        | tee >(sha1sum > dvd.sha1) >(md5sum > dvd.md5) > dvd.iso
 ```
@@ -1870,7 +1871,7 @@ The most useful option of `tee` is `-a` or `--append`. If the file exists, it's
 not overwritten but appended.  The last widespread usage of `tee` is combining
 it with sudo. Try the following example:
 
-```bash
+```
 [Alex@SpaceShip ~]$ echo "export EDITOR=vim" >> /etc/bashrc
 bash: /etc/bashrc: Permission denied
 [Alex@SpaceShip ~]$ sudo echo "export EDITOR=vim" >> /etc/bashrc
@@ -1938,7 +1939,7 @@ I will quit with CTRL+D
 You can make some simple configuration scripts, that will use `cat` to write
 the desired files. Look at this example:
 
-```bash
+```
 FULL_VER=$(grep -o "[0-9].[0-9]*" /etc/system-release)
 cat << EOF > /etc/yum.repos.d/my_repo.repo
 [my_repo]

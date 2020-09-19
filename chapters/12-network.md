@@ -38,7 +38,7 @@ safely use it even on public networks.
 To install `sshfs` on Enterprise Linux systems, you should install `fuse-sshfs`
 package from the EPEL repository:
 
-```bash
+```
 sudo yum install -y epel-release
 sudo yum install -y fuse-sshfs
 ```
@@ -76,7 +76,7 @@ I won't recommend using sshfs as an always mounted production network file
 system, but it's perfect for small changes, write/reads. The potential problem
 with SSHFS are I/O errors, but they should not corrupt the filesystem ;).
 
-### Allow others to use our sshfs (and other FUSE based) mount.
+### Allow others to use our sshfs (and other FUSE based) mount
 
 Sometimes, sharing FUSE based resources with other users can save us a lot of
 fuss. To do so, you have to edit `/etc/fuse.conf` (uncomment or add
@@ -186,7 +186,7 @@ the ssh keys provided by the host. For the previously mentioned problem, look at
 the following solution:
 
 
-```bash
+```
 TO_HOST=this.is.my.host.com
 [ $(grep  -cim1 "$TO_HOST" ~/.ssh/known_hosts) -gt 0 ] || ssh-keyscan "$TO_HOST" | tee -a  ~/.ssh/known_hosts 
 # Now the ssh commands can be invoked.
@@ -198,7 +198,7 @@ TO_HOST=this.is.my.host.com
 ssh-keyscan with a tee in append (`-a`) mode runs.
 
 
-## Instant directory content sharing with Python.
+## Instant directory content sharing with Python
 
 Sometimes you have to share files with random people. One of the most
 straightforward solutions is to share the content of a directory on a web
@@ -224,7 +224,7 @@ python3 -m http.server
 Because Python 2 will hit EOL soon, I recommend using Python 3. You can
 also change the port on which our webserver will listen (default 8000):
 
-```bash
+```
 python2 -m SimpleHTTPServer 8080 # port 8080 on 0.0.0.0
 python3 -m http.server 8080 # port 8080 on 0.0.0.0
 ```
@@ -234,7 +234,7 @@ Of course - 0.0.0.0 means all interfaces.
 
 In Python 3, we can also choose on which interface our server should listen.
 
-```bash
+```
 python3 -m http.server 8080 -b 10.10.1.123 # port 8080 on 10.10.1.123
 ```
 

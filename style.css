@@ -7,7 +7,7 @@ html {
 
 body {
 //  font-family: Ubuntu, Hack, monospace;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.7;
   padding: 1em;
   margin: auto;
@@ -99,11 +99,11 @@ hr {
 }
 
 pre, code, kbd, samp {
-  color: #000;
   font-family: monospace, monospace;
   _font-family: 'courier new', monospace;
   font-size: 1.05em;
   font-weight: 800;
+  white-space: pre-wrap;
 }
 
 .smaller_font code, .smaller_font pre {
@@ -290,3 +290,5 @@ table td {
     page-break-after: avoid;
   }
 }
+
+pre{background-color:#1e2124;padding:20px;color:#fff;-webkit-box-shadow:0 3px 6px 0 rgba(0,0,0,.12), 0 3px 6px 0 rgba(0,0,0,.05);box-shadow:0 3px 6px 0 rgba(0,0,0,.12), 0 3px 6px 0 rgba(0,0,0,.05);border-radius:12px;}

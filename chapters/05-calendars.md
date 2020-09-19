@@ -88,7 +88,7 @@ August 1994
 
 To print the whole year, type it as the first and only argument.
 
-```bash
+```
 [Alex@Normandy ~]$ cal 2020
                                2020                               
 
@@ -107,7 +107,7 @@ units, "logical" date format (see picture below) and what is annoying in our
 case - have a week start set to Sunday. To overcome this cringe use this
 alias:
 
-```bash
+```
 [Alex@SpaceShip ~]$  echo "alias cal="cal -m" >> ~/.bashrc
 ```
 
@@ -130,7 +130,7 @@ Github project page: https://github.com/insanum/gcalcli
 To install it you need the `pip` - the Python package manager. In case of
 Enterprise Linux it can be   be installed from the EPEL repository.
 
-```bash
+```
 sudo pip install gcalcli vobject parsedatetime
 ```
 
@@ -138,13 +138,13 @@ After installation, the `gcalcli` can be invoked with `list` argument (a
 subcommand). If calendar is not configured, it will start the browser to
 configure access to a Google calendar.
 
-```bash
+```
 [Alex@SpaceShip el7]$ gcalcli list
 ```
 
 After this straightforward procedure, the `list` should list an actual calendar.
 
-```bash
+```
 [Alex@SpaceShip el7]$ gcalcli list
  Access  Title
  ------  -----
@@ -155,31 +155,31 @@ After this straightforward procedure, the `list` should list an actual calendar.
 
 To list all calendar events for the week:
 
-```bash
+```
 [Alex@SpaceShip el7]$ gcalcli calw 
 ```
 
 To list the week for the particular calendar (my.gmail.mail@gmail.com) combine
 `calw` with `--calendar` option.
 
-```bash
+```
 [Alex@SpaceShip el7]$ gcalcli calw --calendar my.gmail.mail@gmail.com
 ```
 To list the whole month, replace `w`eek with `m`onth in `cal` subcommand (I feel relaxed looking at the output of this command)
 
-```bash
+```
 [Alex@SpaceShip el7]$ gcalcli calm 
 ```
 
 To list holidays, you might use the Holidays calendar.
 
-```bash
+```
 [Alex@SpaceShip el7]$ gcalcli calm --calendar Holidays
 ```
 
 Making an event is dead simple because it is an interactive form :).
 
-```bash
+```
 [Alex@SpaceShip el7]$ gcalcli add 
 Title: Bash Bushido Grammarly check
 Location: Cracow
@@ -192,7 +192,7 @@ Enter a valid reminder or '.' to end: .
 With a lot of events in the calendar, you might want to search for the chosen
 event with the `search` subcommand.
 
-```bash
+```
 [Alex@SpaceShip el7_builder]$ gcalcli search bash
 
 2018-10-10   6:00pm  Bash Bushido Grammarly check
@@ -201,7 +201,7 @@ event with the `search` subcommand.
 The event deletion functionality searches for matching events first and then
 asks for removal confirmation.
 
-```bash
+```
 [Alex@SpaceShip el7_builder]$ gcalcli delete bash
 
 2018-10-10   6:00pm  Bash Bushido Grammarly check

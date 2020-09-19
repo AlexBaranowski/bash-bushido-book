@@ -1,4 +1,4 @@
-# Print to console like a hacker (or a script kiddie).
+# Print to console like a hacker (or a script kiddie)
 In this chapter, we will look into the way of printing the letters, symbols,
 even some kind of Linux memes. Please note that the knowledge from this chapter
 is not very helpful when it comes to being a SysAdmin or DevOps.
@@ -51,7 +51,7 @@ give you a glimpse how to use it. To compile my version of the banner you can
 use following commands.
 
 ```
-git clone git@github.com:AlexBaranowski/Banner.git
+git clone https://github.com/AlexBaranowski/Banner.git
 cd Banner
 make
 sudo make install
@@ -111,7 +111,7 @@ program that "displays large characters made up of ordinary screen characters".
 
 Installation on EL machine (requires EPEL):
 
-```bash
+```
 sudo yum install -y epel-release
 sudo yum install -y figlet
 ```
@@ -143,7 +143,7 @@ term
 
 The following script will print all fonts with a sample output.
 
-```bash
+```
 #!/bin/bash
 for i in $(rpm -ql figlet | grep flf | sed 's:.*/::' | sed "s/.flf//");
 do
@@ -189,7 +189,7 @@ Moreover, `cowsay` has multiple modes, that we will discuss further.
 On Enterprise Linux distributions package cowsay can be installed from the EPEL
 repository . Installation is as straight forward as:
 
-```bash
+```
 sudo yum install -y epel-release
 sudo yum install -y cowsay
 ```
@@ -227,7 +227,7 @@ This short script will iterate through all extra cow ASCII pictures and print a
 message with the name of the used image.  `-W` parameter sets the terminal
 width to 100 characters.
 
-```bash
+```
 #!/bin/bash
 
 for i in /usr/share/cowsay/*.cow; do
@@ -322,7 +322,7 @@ text in beautiful rainbow colors. Because lolcat is ruby based, we need `ruby`
 and `gem` (RubyGems package manager command line tool). Installation on
 Enterprise Linux:
 
-```bash
+```
 sudo yum install rubygems -y
 gem install lolcat
 ```
@@ -356,13 +356,14 @@ are bored) and then ~~totally forget~~ use it occasionally.
 
 Installation on EuroLinux (Enterprise Linux) 7:
 
-```bash
+```
 sudo yum install -y @development # We need gcc, git and make
-git clone git@github.com:bartobri/no-more-secrets.git 
+git clone https://github.com/bartobri/no-more-secrets.git
 cd no-more-secrets
 make all
 sudo make install
 ```
+
 Sample usage:
 
 ```
@@ -383,7 +384,7 @@ than dinosaurs). The version used by Enterprise Linux distributions is a little
 bit different from the one used by BSD (that has, let's say, a rough history).
 You can install **fortune-mod** package from EPEL repository.
 
-```bash
+```
 sudo yum install -y epel-release
 sudo yum install -y fortune-mod
 ```
@@ -433,7 +434,7 @@ make the short/long classification too high, the fortune will be in a
 never-ending loop, so you have to kill it manually.
 
 
-```bash
+```
 # Infinite fortune search
 fortune -l -n 600000
 ```

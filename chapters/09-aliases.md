@@ -14,6 +14,7 @@ system. Then, together, we will dive a little deeper into aliases in Bash.
 
 The command that is responsible for alias management has quite a surprising
 name - `alias`. To print the currently used aliases use:
+
 ```
 Alex@Normandy$ alias
 alias back='popd'
@@ -26,7 +27,7 @@ empty `alias` and `alias -p`. The only difference that this option makes is
 when defining the new alias - it also prints all other aliases (with the new
 one ;)).
 
-To define a new alias, use `alias alias_name='command args'.
+To define a new alias, use `alias alias_name='command args'`.
 
 There are some aliases that I'm using in my very own environment.
 ```
@@ -47,7 +48,7 @@ alias my_ip='curl -s ifconfig.co/json | python3 -m json.tool'
 The important and interesting alias is `alias sudo='sudo '`. To get why I'm
 aliasing sudo let's look at the following example.
 
-```bash
+```
 [Alex@SpaceShip BashBushido]$ alias ok='echo OK'
 [Alex@SpaceShip BashBushido]$ sudo ok
 sudo: ok: command not found
@@ -126,10 +127,10 @@ this topic - https://dotfiles.github.io/ . It's excellent to start and find the
 most known configurations for many programs (like `emacs` or `vim`) or shells
 :).
 
-## Check what command is - type.
+## Check what command is - type
 To check what command really is you can use `type` shell builtin.
 Type for all possible returned values
-```bash
+```
 [Alex@SpaceShip ~]$ type type
 type is a shell builtin
 [Alex@SpaceShip ~]$ type bash
@@ -150,7 +151,7 @@ bash: type: asdsadf: not found
 
 The most useful option of `type` is `-t` flag that prints only a single word.
 It's useful for scripting.
-```bash
+```
 [Alex@SpaceShip ~]$ type -t type
 builtin
 [Alex@SpaceShip ~]$ type -t bash
@@ -165,7 +166,7 @@ function
 [Alex@SpaceShip ~]$
 ```
 
-## Check if the command is aliased.
+## Check if the command is aliased
 We have at least 5 way to do it, 4 of them are easy to script, the last one
 should be already known to an attentive reader.
 
@@ -175,7 +176,7 @@ should be already known to an attentive reader.
 3. Use `BASH_ALIASES` variable
 4. Use `shell-expand-line`.
 
-```bash
+```
 [Alex@SpaceShip ~]$ alias
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -205,7 +206,7 @@ least two ways of doing that:
 2. use `\` before a command.
 
 Look at following listening:
-```bash
+```
 [Alex@SpaceShip eurolinux7]$ ls
 Dockerfile
 [Alex@SpaceShip eurolinux7]$ alias ls='echo Hit Me with Your Best Shot'

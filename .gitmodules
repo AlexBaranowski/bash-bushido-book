@@ -1,0 +1,3 @@
+[submodule "chrome-print-page-python"]
+	path = chrome-print-page-python
+	url = https://github.com/AlexBaranowski/chrome-print-page-python.git

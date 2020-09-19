@@ -70,7 +70,7 @@ cheat console.
 As it's easy to predict, the people that make free software ~~steal~~ adapt the
 idea of drop-down terminals and then perfect it. In Bash Bushido, we will
 discuss the two most popular dropdown terminals - Guake and Yakuake. Note that
-both have names that end with **ake** to honor the **Quake** game.
+both have names that end with **uake** to honor the **Quake** game.
 
 
 ## Guake - Gnome Drop Down Terminal
@@ -289,7 +289,7 @@ cumbersome. The only thing that I found unique in them is the ability to run on
 a server without X11 (or Wayland :)), and detach. To deatch your screen sesion
 use `ctrl` + `a` then `ctrl` + `d`.
 
-```bash
+```
 sudo yum install -y screen
 screen
 # Do you work - ex. setup IRC communicator
@@ -303,7 +303,7 @@ Mnemonics:
 - `ctlr` + `a`ctivate (extra options) then `ctrl` + `d`etach
 - screen -`r`eattach
 
-## Cool-retro-term.
+## Cool-retro-term
 
 There is a group of projects that I sometimes call "uncle projects" or "uncle
 software". I really like being an uncle, especially at familly gatherings, when
@@ -318,7 +318,7 @@ You can install the `cool-retro-term` from nux repos (https://li.nux.ro/). Or co
 it from the source. When compiling it from the source on an Enterprise Linux system,
 you should change qmltermwidget version. The following script worked for me:
 
-```bash
+```
 #!/bin/bash
 CRT_URL=https://github.com/Swordfish90/cool-retro-term/archive/1.0.1.tar.gz
 WIDGET_URL=https://github.com/Swordfish90/qmltermwidget/archive/v0.1.0.tar.gz

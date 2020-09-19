@@ -8,7 +8,7 @@ more into the processes, how to monitor system with basics tools. I
 recommend reading more about `procps-ng` and programs maintained by this
 project (the top is one of them).
 
-## top  - top tier serious process monitor.
+## top  - top tier serious process monitor
 
 As said before, the `top` is one of the most well-known Unix (and Linux)
 programs.  Most Linux distributions use the rewritten and much-improved version
@@ -44,7 +44,7 @@ any extra steps to install.
 To invoke the `top` just type its name, additional arguments are not required.
 
 
-```bash
+```
 top
 ```
 
@@ -184,7 +184,7 @@ By default, there are the following columns (fields) in the task area:
 ## Customizing the TOP
 Before making the customization, I strongly recommend making the top symlink
 and then invoking `top` by it.
-```bash
+```
 $ sudo ln -s /usr/bin/top /usr/bin/my_top
 $ my_top
 ```
@@ -264,7 +264,7 @@ In my case, I used `S2 M1 H4 T7` that in my opinion look acceptable.
 
 ![Top summary - memory.\label{Top summary - memory}](images/10-top-htop/my_top_final.png)
 
-### Sorting processes.
+### Sorting processes
 One of the most essential functionality in the top is the ability to sort
 the processes by a given filter or measurement. 
 
@@ -286,7 +286,7 @@ In order to flip the order of sorting (DESC/ASC) use `R` like `R`everse :).
 The field on which the top will sort can also be chosen in the interactive
 field management (`f` or `F`).
 
-## Practical Top usage.
+## Practical `top` usage
 
 I will take the first and most important advice straight from the `top` manual
 ```
@@ -298,7 +298,7 @@ Because the top is potent and robust, there is no need/way to memorize all keys
 and settings.  As said before, when in doubt, use the help or the manual.
 Netherless I'm going to present the most important ones.
 
-### Sorting and filters.
+### Sorting and filters
 
 - `P` - sort processes by CPU usage - `P`rocessor.
 - `M` - sort processes by memory usage - `M`emory.
@@ -326,7 +326,7 @@ configuration.
 
 ### Summary area 
 
-- `1`,`2,`3` - change the way that CPU/S are showed. Note that first and
+- `1`,`2`,`3` - change the way that CPU/S are showed. Note that first and
   seconds have two submodes.
 - `t` - change the way the CPU load is showed.
 - `m` - change the way that memory is showed
@@ -346,7 +346,7 @@ configuration.
 I highly recommend trying each of the presented keys, modes, and
 configurations. Then try to find the setting that suits you the most.
 
-## htop - top on steroids.
+## htop - top on steroids
 
 The name `htop` came from `Hisham top` - the first letter is from the name of
 the program author, but I personally remember it with the HyperTOP mnemonic.
