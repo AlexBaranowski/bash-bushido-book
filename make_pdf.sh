@@ -7,7 +7,8 @@ export TO_KILL_PYTHON
 
 
 cleanup(){
-    kill $TO_KILL_CHROME $TO_KILL_PYTHON
+    set +euo pipefail
+    kill "$TO_KILL_CHROME" "$TO_KILL_PYTHON"
 }
 
 set -euo pipefail
@@ -44,8 +45,8 @@ print_pdf(){
 }
 
 main(){
-    echo "COMMENT ME to run this script - v1.1 used FireFox to generate PDF!"
-    exit 0
+#    echo "COMMENT ME to run this script - v1.1 used FireFox to generate PDF!"
+#    exit 0
     echo "-> PDF gen script start!"
     setup_chrome_dev_tools_env
     echo "-> Chrome started!"
